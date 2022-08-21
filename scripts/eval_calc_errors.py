@@ -152,8 +152,6 @@ for result_filename in p['result_filenames']:
   method = str(result_info[0])
   dataset_info = result_info[1].split('-')
   dataset = result_info[2]
-  print(dataset)
-  assert False
   split = 'test'
   split_type = 'pbr'
   split_type_str = ' - ' + split_type if split_type is not None else ''
