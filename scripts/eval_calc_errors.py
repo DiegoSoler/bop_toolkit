@@ -2,14 +2,17 @@
 # Center for Machine Perception, Czech Technical University in Prague
 
 """Calculates error of 6D object pose estimates."""
-import sys
-sys.path.insert(1, os.path.join(sys.path[0], '..'))
 
 import os
 import time
 import argparse
 import copy
 import numpy as np
+
+#
+import sys
+sys.path.insert(1, os.path.join(sys.path[0], '..'))
+#
 
 from bop_toolkit_lib import config
 from bop_toolkit_lib import dataset_params
