@@ -9,6 +9,11 @@ import argparse
 import subprocess
 import numpy as np
 
+#
+import sys
+sys.path.insert(1, os.path.join(sys.path[0], '..'))
+#
+
 from bop_toolkit_lib import config
 from bop_toolkit_lib import inout
 from bop_toolkit_lib import misc
