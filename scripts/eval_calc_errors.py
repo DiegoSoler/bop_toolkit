@@ -2,6 +2,8 @@
 # Center for Machine Perception, Czech Technical University in Prague
 
 """Calculates error of 6D object pose estimates."""
+import sys
+sys.path.insert(1, os.path.join(sys.path[0], '..'))
 
 import os
 import time
