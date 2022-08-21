@@ -148,7 +148,6 @@ for result_filename in p['result_filenames']:
   # Parse info about the method and the dataset from the filename.
   result_name = os.path.splitext(os.path.basename(result_filename))[0]
   result_info = result_name.split('_')
-  print(result_name)
   method = str(result_info[0])
   dataset_info = result_info[1].split('-')
   dataset = result_info[2]
@@ -190,7 +189,7 @@ for result_filename in p['result_filenames']:
   ren = None
   if p['error_type'] in ['vsd', 'cus']:
     misc.log('Initializing renderer...')
-    width, height = dp_split['im_size']
+    
     ren = renderer.create_renderer(
       width, height, p['renderer_type'], mode='depth')
     for obj_id in dp_model['obj_ids']:
