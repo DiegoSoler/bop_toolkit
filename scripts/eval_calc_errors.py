@@ -147,14 +147,13 @@ for result_filename in p['result_filenames']:
 
   # Parse info about the method and the dataset from the filename.
   result_name = os.path.splitext(os.path.basename(result_filename))[0]
-  print(result_name)
-  assert False
   result_info = result_name.split('_')
+  print(result_name)
   method = str(result_info[0])
   dataset_info = result_info[1].split('-')
-  dataset = str(dataset_info[0])
-  split = str(dataset_info[1])
-  split_type = str(dataset_info[2]) if len(dataset_info) > 2 else None
+  dataset = result_info[1]
+  split = 'test'
+  split_type = 'pbr'
   split_type_str = ' - ' + split_type if split_type is not None else ''
 
   # Load dataset parameters.
