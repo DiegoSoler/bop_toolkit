@@ -186,14 +186,14 @@ for result_filename in p['result_filenames']:
         models_info[obj_id], p['max_sym_disc_step'])
 
   # Initialize a renderer.
-  ren = None
-  if p['error_type'] in ['vsd', 'cus']:
-    misc.log('Initializing renderer...')
+  # ren = None
+  # if p['error_type'] in ['vsd', 'cus']:
+  #   misc.log('Initializing renderer...')
     
-    ren = renderer.create_renderer(
-      width, height, p['renderer_type'], mode='depth')
-    for obj_id in dp_model['obj_ids']:
-      ren.add_object(obj_id, dp_model['model_tpath'].format(obj_id=obj_id))
+  #   ren = renderer.create_renderer(
+  #     width, height, p['renderer_type'], mode='depth')
+  #   for obj_id in dp_model['obj_ids']:
+  #     ren.add_object(obj_id, dp_model['model_tpath'].format(obj_id=obj_id))
 
   # Load the estimation targets.
   targets = inout.load_json(
